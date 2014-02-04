@@ -1,0 +1,192 @@
+@font-face{
+	font-family: "Roboto";
+	src: url(Roboto-Light.ttf);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  background-color: #ccc;
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: #010;
+}
+
+.mattonella-lista{
+  float: left;
+  width: 17%;
+  text-align: center;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #e00;
+  font-size: 15pt;
+}
+
+.mattonella-segnala{
+  float: left;
+  width: 17%;
+  text-align: center;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #0e0;
+  font-size: 15pt;
+}
+
+.mattonella-ricerca{
+  float: left;
+  width: 17%;
+  text-align: center;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #22e;
+  font-size: 15pt;
+}
+
+.mattonella-report{
+  float: left;
+  width: 17%;
+  text-align: center;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #fe0;
+  font-size: 15pt;
+}
+
+.mattonella-appunti{
+  float: left;
+  width: 17%;
+  text-align: center;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #0cf;
+  font-size: 15pt;
+}
+
+.mattonella-impostazioni{
+  float: left;
+  width: 15%;
+  text-align: center;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #af0;
+  font-size: 15pt;
+}
+
+.lista{
+  position: fixed;
+  z-index: -1;
+  width: 17%;
+  height: 100%;
+  background-color: #e00;
+  left: 0%;
+}
+
+.segnala{
+  position: fixed;
+  z-index: -1;
+  width: 17%;
+  height: 100%;
+  background-color: #0e0;
+  margin-bottom: 0;
+  left: 17%;
+}
+
+.ricerca{
+  position: fixed;
+  z-index: -1;
+  width: 17%;
+  height: 100%;
+  background-color: #22e;
+  margin-bottom: 0;
+  left: 34%;
+}
+
+.report{
+  position: fixed;
+  z-index: -1;
+  width: 17%;
+  height: 100%;
+  background-color: #fe0;
+  bottom: 0px;
+  left: 51%;
+}
+
+.appunti{
+  position: fixed;
+  z-index: -1;
+  width: 17%;
+  height: 100%;
+  background-color: #0cf;
+  margin-bottom: 0;
+  left: 68%;
+}
+
+.impostazioni{
+  position: fixed;
+  z-index: -1;
+  width: 15%;
+  height: 100%;
+  background-color: #af0;
+  margin-bottom: 0;
+  left: 85%;
+}
+
+#contenuto{
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 14%;
+  bottom: 2%;
+  background-color: #eee;
+  opacity: 0.97;
+}
+
+table{
+  border-spacing: 0px;
+  margin: 1%;
+}
+.riga0{
+  background-color: #ddd;
+}
+.riga1{
+  background-color: #fff;
+}
+
+.caselladitesto{
+  background-color: #eee;
+  border: 0;
+  padding: 1%;
+  font-family: 'Roboto';
+  font-size: 12pt;
+}
+td{
+  padding: 5px;
+  vertical-align: top;
+  border-right: 2px solid #eee;
+}
+
+.segnalato{
+  font-size: 8pt;
+  margin-top: 2%;
+  text-align: right;
+}
+
+.bottone{
+  font-family: 'Roboto';
+  font-size: 12pt;
+  background-color: #e3e3e3;
+  text-align: center;
+  border: 0;
+  padding: 2%;
+  margin: 2%;
+}
