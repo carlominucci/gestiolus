@@ -2,8 +2,8 @@
 // persolizza i tuoi parametri
 $title = "Gestiolus";			// il titolo che comparirà sulla barra del browser
 $hostname = "localhost";		// l'host del tuo database
-$username = "USERNAME";		// il nome utente per accedere al database
-$password = "PASSWORD";	// la password per accedere al database
+$username = "root";		// il nome utente per accedere al database
+$password = "cf81003";	// la password per accedere al database
 $database = "gestiolus";	// il nome del tuo database
 $checkupdate = "y"; 		// controllo aggiornamenti: y = abilitato, n = disabilitato
 
