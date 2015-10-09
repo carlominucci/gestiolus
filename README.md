@@ -1,3 +1,7 @@
+https://raw.githubusercontent.com/carlominucci/gestiolus/master/logo.png
+
+![alt tag](https://raw.githubusercontent.com/carlominucci/gestiolus/master/logo.png)
+
 # Gestiolus
 
 *Gestiolus* è un gestionale per interventi tecnici. Permette
