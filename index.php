@@ -59,8 +59,5 @@
 
 	<?php include("note.php"); ?>
 	
-	<p class="version">
-	<?php include("version.php"); ?>
-	</p>
 </body>
 </html>
