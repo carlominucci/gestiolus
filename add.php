@@ -24,7 +24,7 @@ if(isset($_POST['nomepc']) && isset($_POST['ubicazione']) && isset($_POST['guast
 <html lang="it"> 
 	<head> 
 		<meta charset=utf-8> 
-		<meta HTTP-EQUIV="Refresh" content="<?php echo rand(1,5); ?>; url=add.php">
+		<meta HTTP-EQUIV="Refresh" content="<?php echo rand(1,5); ?>; url=guasti.php">
 		<title><?php echo $title; ?></title></head>
 		<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 	</head>

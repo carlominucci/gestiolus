@@ -9,6 +9,7 @@ if(isset($_POST['note'])){
 		$_POST['name'] = addslashes(strip_tags($_POST['name']));
   	}
 	$query="INSERT INTO notepad VALUES('', '". $_POST['note'] . "', '" . $_POST['name'] . "')";
+	echo $query;
 	if (!$link) {
    		die('Could not connect: ' . mysql_error());
 	}else{
@@ -51,7 +52,7 @@ $result = mysql_query($query);
 		die('Invalid query: ' . mysql_error());
 	}
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)){
-		echo "<p class=\"inputnote\">" . $row[1] . " <i class=\"delnote\"><a href=\"note.php?delid=" . $row[0] . "\"><img src=\"img/del.png\" alt=\"cancella\" /></a></i> </p>\n";
+		echo "<p class=\"inputnote\">" . $row[1] . " <i class=\"delnote\">annotato da<b>: " . $row[2] . "</b><a href=\"note.php?delid=" . $row[0] . "\"><img src=\"img/del.png\" alt=\"cancella\" /></a></i> </p>\n";
 	}
 }
 ?>
