@@ -58,5 +58,7 @@ $result = mysql_query($query);
 ?>
 </div>
 <?php
+}elseif($stato[0] == 0){
+	echo "<script>location.href = 'guasti.php'</script>";
 }
 ?>
