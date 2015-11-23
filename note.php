@@ -37,7 +37,9 @@ if(isset($_POST['note'])){
 	header('Location: index.php');
 }else{	
 ?>
-Blocco note
+<p>
+<h1>Blocco note</h1>
+</p>
 <form action="note.php" method="post">
 
 	<input type="text" name="note" class="inputnote" value="Inserisci la nota..." onClick="javascript:this.value=''" size="45%" />
