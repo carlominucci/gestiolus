@@ -37,7 +37,7 @@ if(isset($_POST['note'])){
 	header('Location: index.php');
 }else{	
 ?>
-<div class="notepad">
+Blocco note
 <form action="note.php" method="post">
 
 	<input type="text" name="note" class="inputnote" value="Inserisci la nota..." onClick="javascript:this.value=''" size="45%" />
@@ -52,11 +52,13 @@ $result = mysql_query($query);
 		die('Invalid query: ' . mysql_error());
 	}
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)){
-		echo "<p class=\"inputnote\">" . $row[1] . " <i class=\"delnote\">annotato da<b>: " . $row[2] . "</b><a href=\"note.php?delid=" . $row[0] . "\"><img src=\"img/del.png\" alt=\"cancella\" /></a></i> </p>\n";
+		echo "<div class=\"delnote\"><a href=\"note.php?delid=" . $row[0] . "\">
+                <img src=\"img/del.png\" alt=\"cancella\" /></a></div>\n";
+		echo "<p class=\"inputnote\">" . $row[1] . " <br />
+		<i>annotato da:<b> " . $row[2] . "</b></i></p>";
 	}
 }
 ?>
-</div>
 <?php
 }elseif($stato[0] == 0){
 	echo "<script>location.href = 'guasti.php'</script>";

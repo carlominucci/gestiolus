@@ -116,20 +116,20 @@ input, textarea, select{
 	right: 0px;
 }
 .notepad{
-	z-index: 3;
-	position: fixed;
+//	z-index: 3;
+//	position: fixed;
 	bottom: 0px;
 	left: 0px;
-	right: 30%;
-	top: 40%;
+//	right: 30%;
+//	top: 40%;
 	font-size: 12px;
 	background-color: #fafafa;
-	border-right: solid 2px #aaa;
-	border-top: solid 2px #aaa;
-	border-radius: 0px 20px 0px 0px;
+//	border-right: solid 2px #aaa;
+//	border-top: solid 2px #aaa;
+//	border-radius: 0px 20px 0px 0px;
 	margin: 0px;
 	padding: 10px;
-	margin-right: 30px;
+//	margin-right: 30px;
 }
 .inputnote{
 	border: none;
@@ -147,6 +147,7 @@ input, textarea, select{
 }
 
 .delnote{
-	position: fixed;
-	right: 35%;
+	//position: fixed;
+	//right: 35%;
+	float: right;
 }
