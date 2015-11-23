@@ -121,12 +121,12 @@ input, textarea, select{
 	border: none;
 	border-bottom-left-radius: 10px;
 	border-top-right-radius: 10px;
-	background-color: #eee;
+	background-color: #ddd;
 	padding: 10px;
 }
 
 .submitnote{
-	border: none;
+	border: 2px solid #ddd;
 	border-radius: 8px;
 	background-color: #eee;
 	padding: 8px;
