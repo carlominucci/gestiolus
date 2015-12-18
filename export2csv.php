@@ -14,6 +14,7 @@ if (!$link) {
 	if (!$result) {
         	die('Invalid query: ' . mysql_error());
         }
+	echo "\"id\",\"ubicazione\",\"cod./inv.\",\"guasto\",\"soluzione\",\"data apertura\",\"data chiusura\",\"tecnico\"\n";
         while ($row = mysql_fetch_array($result, MYSQL_NUM)){
         	$querytecnico="SELECT nome FROM tecnici WHERE id=" . $row[7];
                 $resulttecnico=mysql_query($querytecnico);
