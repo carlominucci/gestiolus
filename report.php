@@ -42,7 +42,7 @@ if ( ! get_magic_quotes_gpc() ) {
 			</select>
 			<input type="submit" value="Filtra" />
 		</form>
-		<br /><a href="export2csv.php">Esporta tutto in formato CSV</a>
+		<br /><a href="export2csv.php">Esporta tutto in formato CSV</a> (click col tasto destro poi "salva con nome")
 		
 <?php
 if($_POST['filtro'] == "" || $_POST['filtro'] == "tutti"){
@@ -104,7 +104,7 @@ elseif(isset($_POST['filtro'])){
 			$query="SELECT * FROM guasti WHERE stato = '1' AND risolutore = '" . $_POST['filtro'] . "' ORDER BY data_chiusura DESC";
 			$result = mysql_query($query);
 			echo "<br /><hr />Numero totale di interventi effettuati da <b>". $nome[0] . "</b>:<b> " . mysql_affected_rows() . "</b><br />";
-			echo "(<a href=\"export2csv.php?filtro=" . $_POST['filtro'] . "\">Esporta in formato CSV</a>)<br /><br />\n";
+			echo "<a href=\"export2csv.php?filtro=" . $_POST['filtro'] . "\">Esporta in formato CSV</a> (click col tasto destro poi \"salva con nome\")<br /><br />\n";
 			if (!$result) {
 	    			die('Invalid query: ' . mysql_error());
 			}
