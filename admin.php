@@ -67,14 +67,14 @@ if($error != ""){
 echo $error;
 }
 ?>
-<table>
+<table class="tabella">
 	<tr>
 		<th>Gestione Laboratori</th>
 		<th>Gestione Nominativi</th>
 		<th>Altro</th>
 	</tr>
 		<td>
-						<table>
+						<table class="tabella">
 
 
 <?php
@@ -99,7 +99,7 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 							</tr>
 						</table>
 </td><td>
-						<table>
+						<table class="tabella">
 <?php
 $querytecnici="SELECT * FROM tecnici";
 $resulttecnici = mysql_query($querytecnici);
@@ -125,7 +125,7 @@ while($rowtecnici = mysql_fetch_array($resulttecnici)){
 							</tr>
 						</table>
 </td><td>
-				<table>
+				<table class="tabella">
 <?php
 $query_settings_blocconote="SELECT stato FROM settings WHERE nome = \"blocconote\"";
 $result_settings_blocconote=mysql_query($query_settings_blocconote);
