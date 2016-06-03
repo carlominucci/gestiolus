@@ -15,9 +15,9 @@
 	<p class="tabella">
 		<table>
 			<tr>
-				<td>Selezionare unicazione</td>
+				<td>Unicazione</td>
 				<td>
-					<acronym title="Inserisci l'bicazione del computer guasto">
+					<acronym title="Inserisci l'ubicazione del guasto">
 						<select name="ubicazione">
 <?php
 $query="SELECT * FROM lab";
@@ -34,7 +34,7 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 				</td>
 			</tr>
 			<tr>
-				<td>Descrizione</td>
+				<td>Descrizione / Nome</td>
 				<td>
 					<acronym title="Inserisci il nome del computer. E' scritto su un lato del computer">
 						<input type="text" name="nomepc" size="45" />

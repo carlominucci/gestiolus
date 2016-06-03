@@ -20,7 +20,7 @@ if ( ! get_magic_quotes_gpc() ) {
 			<?php include "menu.php"; ?>
 		</div>
 		<form action="report.php" method="post">
-			Seleziona il nome: <select name="filtro">
+			Seleziona il nome del tecnico: <select name="filtro">
 			<option value="tutti">Tutti</option>
 	<?php
 	if (!$link) {
