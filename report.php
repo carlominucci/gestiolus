@@ -74,7 +74,7 @@ if($_POST['filtro'] == "" || $_POST['filtro'] == "tutti"){
                         	$resulttecnico=mysql_query($querytecnico);
                         	$risolutore=mysql_fetch_array($resulttecnico);
                                 echo "<tr>\n";
-                                echo "<td>$row[10]</td><td>$row[1]<br />$row[10]</td><td>$row[2]</td><td>" . stripslashes($row[3]) . "</td><td>" . stripslashes($row[6]) . "</td><td>" . str_replace("-", "/", $row[5]) . "</td><td>" . str_replace("-", "/", $row[8]) . "</td><td>" . $risolutore[0] . "</td>\n";
+                                echo "<td>$row[10]</td><td>$row[1]</td><td>$row[2]</td><td>" . stripslashes($row[3]) . "</td><td>" . stripslashes($row[6]) . "</td><td>" . str_replace("-", "/", $row[5]) . "</td><td>" . str_replace("-", "/", $row[8]) . "</td><td>" . $risolutore[0] . "</td>\n";
                                 ?>
                                 <?php
                                 echo "</tr>\n";
