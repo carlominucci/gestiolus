@@ -73,8 +73,13 @@ if($_POST['filtro'] == "" || $_POST['filtro'] == "tutti"){
                         	$querytecnico="SELECT nome FROM tecnici WHERE id=" . $row[7];
                         	$resulttecnico=mysql_query($querytecnico);
                         	$risolutore=mysql_fetch_array($resulttecnico);
+				
+					$descrizione=stripslashes($row[3]);
+                                        $soluzione=stripslashes($row[6]);
+
+
                                 echo "<tr>\n";
-                                echo "<td>$row[10]</td><td>$row[1]</td><td>$row[2]</td><td>" . stripslashes($row[3]) . "</td><td>" . stripslashes($row[6]) . "</td><td>" . str_replace("-", "/", $row[5]) . "</td><td>" . str_replace("-", "/", $row[8]) . "</td><td>" . $risolutore[0] . "</td>\n";
+                                echo "<td>$row[10]</td><td>$row[1]</td><td>$row[2]</td><td>" . $descrizione . "</td><td>" . $soluzione . "</td><td>" . str_replace("-", "/", $row[5]) . "</td><td>" . str_replace("-", "/", $row[8]) . "</td><td>" . $risolutore[0] . "</td>\n";
                                 ?>
                                 <?php
                                 echo "</tr>\n";
@@ -109,8 +114,12 @@ elseif(isset($_POST['filtro'])){
 	    			die('Invalid query: ' . mysql_error());
 			}
 			while ($row = mysql_fetch_array($result, MYSQL_NUM)){
+				
+                                        $descrizione=stripslashes($row[3]);
+                                        $soluzione=stripslashes($row[6]);
+					
 	    			echo "<tr>\n";
-				echo "<td>$row[10]</td><td>$row[1]</td><td>$row[2]</td><td>" . stripslashes($row[3]) . "</td><td>" . stripslashes($row[6]) . "</td><td>" . str_replace("-", "/", $row[5]) . "</td><td>" . str_replace("-", "/", $row[8]) . "</td>\n";
+				echo "<td>$row[10]</td><td>$row[1]</td><td>$row[2]</td><td>" . $descrizione . "</td><td>" . $soluzione . "</td><td>" . str_replace("-", "/", $row[5]) . "</td><td>" . str_replace("-", "/", $row[8]) . "</td>\n";
 				?>
 				<?php
 				echo "</tr>\n";
