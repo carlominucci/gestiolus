@@ -1,4 +1,5 @@
 <?php include "config.php"; ?>
+<?php include "function.php"; ?>
 <!DOCTYPE html> 
 <html lang="it"> 
 	<head> 
@@ -32,7 +33,9 @@
 		while ($row = mysql_fetch_array($result, MYSQL_NUM)){
     			echo "<tr>\n";
 			echo "<td>$row[1]<p class=\"segnalatoda\">cod./inv.: <b>$row[10]</b></p></td>";
-			echo "<td>$row[2]</td><td>" . stripslashes($row[3]) . "<br/>";
+			echo "<td>$row[2]</td><td>";
+			greppaurl(stripslashes($row[3]));
+			echo "<br />";
 			if($row[4] != ""){
 				echo "<p class=\"segnalatoda\">segnalato da: <b>" . $row[4] . "</b></p>";
 			}

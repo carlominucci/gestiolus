@@ -1,4 +1,5 @@
 <?php include "config.php"; ?>
+<?php include "function.php"; ?>
 <!DOCTYPE html> 
 <html lang="it"> 
 	<head> 
@@ -8,19 +9,6 @@
 	</head>
 <body>
 <?php
-
-function greppaurl($stringa){
-        $pezzi=explode(" ", $stringa);
-        $regexpurl="/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
-        foreach ($pezzi as &$pezzo) {
-                if(preg_match('/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/', $pezzo)){
-                        echo "<a href=\"" . $pezzo . "\">". $pezzo . "</a> ";
-                }else{
-                        echo $pezzo . " ";
-                }
-        }
-}
-
 
 if ( ! get_magic_quotes_gpc() ) {
   //$_GET['nome'] = addslashes(strip_tags($_GET['nome']));
