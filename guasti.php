@@ -53,12 +53,12 @@
 								echo "<option value=\"" . $rowtecnici[0] . "\">" . $rowtecnici[1] . "</option>";
 						}
 						?>
-						</select>
+						</select><br />
 						<acronym title="Elimina: <?php echo $row[3]; ?>">
 							<a href="del.php?id=<?php echo $row[0]; ?>"><img src="img/del.png" alt="cancella" /></a>&nbsp;&nbsp; 
 						</acronym>						
-						<acronym title="Elimina: <?php echo $row[3]; ?>">							
-							<input type="submit" value="chiudi" />
+						<acronym title="Chiudi: <?php echo $row[3]; ?>">							
+							<input type="image" src="img/done.png" border="0" />
 						</acronym>
 					
 					</td>
