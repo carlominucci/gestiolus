@@ -56,7 +56,7 @@ $result = mysql_query($query);
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 		echo "<div class=\"delnote\"><a href=\"note.php?delid=" . $row[0] . "\">
                 <img src=\"img/del.png\" alt=\"cancella\" /></a></div>\n";
-		echo "<p class=\"inputnote\">" . $row[1] . " <br />
+		echo "<p class=\"inputnote\"><img src=\"img/note.png\" alt=\"note\" /> " . $row[1] . " <br /><br />
 		<i>annotato da:<b> " . $row[2] . "</b></i></p>";
 	}
 }

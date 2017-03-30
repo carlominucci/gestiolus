@@ -1,4 +1,3 @@
-
 <acronym title="Lista guasti">
 	<a href="guasti.php">
 		<img src="img/view.png" alt="Lista guasti" />
@@ -29,8 +28,3 @@
 		<img src="img/undo.png" alt="Torna indietro" />
 	</a>
 </acronym>
-<!-- <acronym title="Chiudi finestra">
-	<a href="javascript:window.close();" >
-		<img src="img/close.png" alt="Chiudi finestra" />
-	</a>
-</acronym> -->
