@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/carlominucci/gestiolus/master/logo.png)
+![alt tag](https://raw.githubusercontent.com/carlominucci/gestiolus/master/gestiolus-logo.png)
 
 # Gestiolus
 
