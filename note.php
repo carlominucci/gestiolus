@@ -54,10 +54,11 @@ $result = mysql_query($query);
 		die('Invalid query: ' . mysql_error());
 	}
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)){
+		echo "<div class=\"box\">";
 		echo "<div class=\"delnote\"><a href=\"note.php?delid=" . $row[0] . "\">
                 <img src=\"img/del.png\" alt=\"cancella\" /></a></div>\n";
 		echo "<p class=\"inputnote\"><img src=\"img/note.png\" alt=\"note\" /> " . $row[1] . " <br /><br />
-		<i>annotato da:<b> " . $row[2] . "</b></i></p>";
+		<i>annotato da:<b> " . $row[2] . "</b></i></p></div>";
 	}
 }
 ?>

@@ -135,3 +135,12 @@ input, textarea, select{
 .delnote{
 	float: right;
 }
+
+.box{
+	float: left;
+	margin: 10px;
+	padding: 5px;
+	display: block;
+	width: 30%;
+	height: 150px;
+}
