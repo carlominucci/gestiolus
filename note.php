@@ -44,7 +44,7 @@ if(isset($_POST['note'])){
 
 	<input type="text" name="note" class="inputnote" value="Inserisci la nota..." onClick="javascript:this.value=''" size="45%" />
 	<input type="text" name="name" class="inputnote" value="Nome..." onClick="javascript:this.value=''" size="13%" />
-	<input type="submit" value=" annota " class="submitnote" />
+	<input type="submit" value=" salva nota " class="submitnote" />
 </form>
 
 <?php

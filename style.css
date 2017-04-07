@@ -118,9 +118,9 @@ input, textarea, select{
 	padding: 10px;
 }
 .inputnote{
-	border: none;
-	border-bottom-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border: 1px solid #aaa;
+	//border-bottom-left-radius: 10px;
+	//border-top-right-radius: 10px;
 	background-color: #ddd;
 	padding: 10px;
 }

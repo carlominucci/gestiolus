@@ -14,7 +14,7 @@
 			</div>
 				<table class="tabella">
 					<tr>
-						<th>Computer</th>
+						<th>Descrizione / Nome</th>
 						<th>Ubicazione</th>
 						<th>Problema Riscontrato</th>
 						<th>Data</th>
