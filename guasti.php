@@ -12,15 +12,6 @@
 				Lista guasti aperti
 				<?php include "menu.php"; ?>
 			</div>
-				<table class="tabella">
-					<tr>
-						<th>Descrizione / Nome</th>
-						<th>Ubicazione</th>
-						<th>Problema Riscontrato</th>
-						<th>Data</th>
-						<th>Soluzione</th>
-						<th>Tecnico chiusura</th>
-					</tr>
 <?php
 	if (!$link) {
    		die('Could not connect: ' . mysql_error());
@@ -29,6 +20,23 @@
 		$result = mysql_query($query);
 		if (!$result) {
     			die('Invalid query: ' . mysql_error());
+		}
+		$num_rows = mysql_num_rows($result);
+		if($num_rows == 0){
+			echo "<h2>nessun intervento aperto...</h2>";
+		}else{
+?>
+                                <table class="tabella">
+                                        <tr>
+                                                <th>Descrizione / Nome</th>
+                                                <th>Ubicazione</th>
+                                                <th>Problema Riscontrato</th>
+                                                <th>Data</th>
+                                                <th>Soluzione</th>
+                                                <th>Tecnico chiusura</th>
+                                        </tr>
+
+<?php
 		}
 		while ($row = mysql_fetch_array($result, MYSQL_NUM)){
     			echo "<tr>\n";
