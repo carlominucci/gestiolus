@@ -21,7 +21,8 @@ if(file_exists("config.php")){
 		<?php include("menu.php"); ?>
 	</div>
 
-	<?php include("note.php"); ?>
+	<?php //include("note.php"); ?>
+	<?php header("Location: guasti.php"); ?>
 	
 </body>
 </html>

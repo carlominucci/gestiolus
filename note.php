@@ -37,6 +37,7 @@ if(isset($_POST['note'])){
 	header('Location: index.php');
 }else{	
 ?>
+<hr />
 <p>
 <h1>Blocco note</h1>
 </p>

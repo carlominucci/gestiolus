@@ -78,5 +78,7 @@
 	mysql_close($link);
 
 ?>				</table>
+<?php include("note.php"); ?>
 </body>
 </html>
+
