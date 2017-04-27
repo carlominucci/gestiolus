@@ -1,6 +1,7 @@
 <?php 
 if(file_exists("config.php")){
 	include("config.php");
+	header("Location: guasti.php");
 }else{
 	header("Location: install.php");
 }
@@ -22,7 +23,7 @@ if(file_exists("config.php")){
 	</div>
 
 	<?php //include("note.php"); ?>
-	<?php header("Location: guasti.php"); ?>
+	<?php //header("Location: guasti.php"); ?>
 	
 </body>
 </html>
