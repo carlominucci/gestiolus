@@ -16,7 +16,7 @@
 	if (!$link) {
    		die('Could not connect: ' . mysql_error());
 	}else{
-		$query="SELECT * FROM guasti WHERE stato = '0' ORDER BY data_apertura";
+		$query="SELECT * FROM guasti WHERE stato = '0' ORDER BY priorita DESC, data_apertura";
 		$result = mysql_query($query);
 		if (!$result) {
     			die('Invalid query: ' . mysql_error());

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dic 07, 2017 alle 10:37
+-- Generation Time: Dic 07, 2017 alle 12:23
 -- Versione del server: 5.5.58-0+deb8u1
 -- PHP Version: 5.6.30-0+deb8u1
 
@@ -38,8 +38,8 @@ CREATE TABLE IF NOT EXISTS `guasti` (
   `data_chiusura` date NOT NULL,
   `stato` int(1) NOT NULL,
   `codice` varchar(20) DEFAULT NULL,
-  `priorità` int(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=712 DEFAULT CHARSET=latin1;
+  `priorita` int(1) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=715 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -130,7 +130,7 @@ ALTER TABLE `tecnici`
 -- AUTO_INCREMENT for table `guasti`
 --
 ALTER TABLE `guasti`
-MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=712;
+MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=715;
 --
 -- AUTO_INCREMENT for table `lab`
 --
