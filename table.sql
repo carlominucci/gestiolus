@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.12deb2
+-- version 4.2.12deb2+deb8u2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Ott 15, 2015 alle 09:34
--- Versione del server: 5.5.44-0+deb8u1
--- PHP Version: 5.6.13-0+deb8u1
+-- Generation Time: Dic 07, 2017 alle 10:37
+-- Versione del server: 5.5.58-0+deb8u1
+-- PHP Version: 5.6.30-0+deb8u1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -37,8 +37,9 @@ CREATE TABLE IF NOT EXISTS `guasti` (
   `risolutore` varchar(50) NOT NULL,
   `data_chiusura` date NOT NULL,
   `stato` int(1) NOT NULL,
-  `codice` varchar(20) DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=474 DEFAULT CHARSET=latin1;
+  `codice` varchar(20) DEFAULT NULL,
+  `priorità` int(1) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=712 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -49,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `guasti` (
 CREATE TABLE IF NOT EXISTS `lab` (
 `id` int(3) NOT NULL,
   `nome` varchar(100) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -61,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `notepad` (
 `id` int(255) NOT NULL,
   `note` text NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -129,17 +130,17 @@ ALTER TABLE `tecnici`
 -- AUTO_INCREMENT for table `guasti`
 --
 ALTER TABLE `guasti`
-MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=474;
+MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=712;
 --
 -- AUTO_INCREMENT for table `lab`
 --
 ALTER TABLE `lab`
-MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `notepad`
 --
 ALTER TABLE `notepad`
-MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
+MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=85;
 --
 -- AUTO_INCREMENT for table `settings`
 --

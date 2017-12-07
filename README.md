@@ -8,12 +8,13 @@ Nel dettaglio puoi:
 * inserire il guasto con l'ubicazione e la descrizione.
 * descrivere l'intervento effettuato.
 * segnare chi ha eseguito l'intervento.
+* dare una priorità all'intervento.
 * avere un report complessivo e/o nominativo degli interventi.
 * esportare tutto in un file *csv*.
 
 ## Installazione ##
 
-* creare un database chiamato *"gestiolus"*i.
+* creare un database chiamato *gestiolus*.
 * eseguire la query nel file *table.sql*.
 * rinomina il file *config_example.php* in *config.php* e configura *host*, *username* e *password*.
 * se vuoi puoi modificare a piacimento la variabile *$title*, che è la scritta che compare sulla barra del browser.
