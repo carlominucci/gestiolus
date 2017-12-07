@@ -62,8 +62,20 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 			<tr>
 				<td>Segnalato da:</td>
 				<td>
-					<acronym title="Inserisci nome dell'insegnante che segnala il guasto">
+					<acronym title="Inserisci nome di chi segnala il guasto">
 						<input type="text" name="nome" size="45"/>
+					</acronym>
+				</td>
+			</tr>
+			<tr>
+				<td>Priorità</td>
+				<td>
+					<acronym title="Dai una priorità">
+						<select name="priorita">
+							<option value="0">Bassa</option>
+							<option value="1">Media</option>
+							<option value="2">Alta</option>
+						</select>
 					</acronym>
 				</td>
 			</tr>

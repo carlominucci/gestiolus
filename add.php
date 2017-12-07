@@ -7,7 +7,8 @@ if(isset($_POST['nomepc']) && isset($_POST['ubicazione']) && isset($_POST['guast
 	$nome=addslashes(strip_tags($_POST['nome']));
 	$ubicazione=addslashes(strip_tags($_POST['ubicazione']));	
 	$codice=addslashes(strip_tags($_POST['codice']));	
-	$query="INSERT INTO guasti VALUES('', '$nomepc', '$ubicazione', '$guasto', '$nome', '" . date('Y-m-d') . "', '', '', '', '0', '$codice')";
+	$priorita=addslashes(strip_tags($_POST['priorita']));
+	$query="INSERT INTO guasti VALUES('', '$nomepc', '$ubicazione', '$guasto', '$nome', '" . date('Y-m-d') . "', '', '', '', '0', '$codice', '$priorita')";
 	if (!$link) {
    		die('Could not connect: ' . mysql_error());
 	}else{

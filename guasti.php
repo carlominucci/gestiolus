@@ -4,7 +4,7 @@
 <html lang="it"> 
 	<head> 
 		<meta charset=utf-8> 
-		<title><?php echo $title; ?></title></head>
+		<title><?php echo $title; ?></title>
 		<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 	</head>
 <body>
@@ -23,7 +23,7 @@
 		}
 		$num_rows = mysql_num_rows($result);
 		if($num_rows == 0){
-			echo "<h2>nessun intervento aperto...</h2>";
+			echo "<h2>nessun intervento aperto...</h2><hr />";
 		}else{
 ?>
                                 <table class="tabella">
@@ -41,7 +41,15 @@
 		while ($row = mysql_fetch_array($result, MYSQL_NUM)){
     			echo "<tr>\n";
 			echo "<td>$row[1]<p class=\"segnalatoda\">cod./inv.: <b>$row[10]</b></p></td>";
-			echo "<td>$row[2]</td><td>";
+			echo "<td>$row[2]</td><td style=\"border-left: 5px solid";
+			if($row[11] == "0"){
+				echo " green";
+			}elseif($row[11] == "1"){
+				echo " yellow";
+			}elseif($row[11] = "2"){
+				echo " red";
+			}
+			echo ";\">";
 			greppaurl(stripslashes($row[3]));
 			echo "<br />";
 			if($row[4] != ""){
