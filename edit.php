@@ -1,14 +1,34 @@
 <?php include "config.php"; ?>
 <?php
-if(isset($_POST['id']){
-	$query="SELECT * FROM guasti WHERE stato = '$_POST['id']'";
+if(isset($_GET['id'])){
+	$query="SELECT * FROM guasti WHERE id = '$_GET[id]'";
 	$result = mysql_query($query);
 	if (!$result) {
     		die('Invalid query: ' . mysql_error());
 	}
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
- 		$row["name"];
+ 		$nomepc=$row["nomepc"];
+		$ubicazione=$row["ubicazione"];
+		$descrizione=$row["descrizione"];
+		$nome=$row["nome"];
+		$data_apertura=$row["data_apertura"];
+		$codice=$row["codice"];
+		$priorita=$row["priorita"];
 	}	
+}else if(isset($_POST['id'])){
+	$query_update="UPDATE guasti SET 
+	nomepc='" . $_POST[nomepc] . "',
+	ubicazione='" . $_POST[ubicazione] . "',
+	descrizione='" . $_POST[descrizione] . "',
+	nome='" . $_POST[codice] . "',
+	priorita='" . $_POST[priorita] . "'
+	WHERE id=$_POST[id]";
+	echo $query_update;
+	$result = mysql_query($query_update);
+        if (!$result) {
+                die('Invalid query: ' . mysql_error());
+        }
+	header("location: guasti.php");
 }
 
 ?>
@@ -24,7 +44,8 @@ if(isset($_POST['id']){
 			Segnalazione guasti
 			<?php include "menu.php"; ?>
 		</div>
-<form action="add.php" method="post">
+<form action="edit.php" method="post">
+<input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
 	<p class="tabella">
 		<table>
 			<tr>
@@ -39,7 +60,9 @@ if (!$result) {
 	die('Invalid query: ' . mysql_error());
 }
 while ($row = mysql_fetch_array($result, MYSQL_NUM)){
-	echo "<option value=\"" . $row[1] . "\">" . $row[1] . "</option>\n";
+	echo "<option value=\"" . $row[1] . "\"";
+	if($row[1] == $ubicazione){ echo " selected"; }	
+	echo ">" . $row[1] . "</option>\n";
 }
 ?>
 						</select>
@@ -50,7 +73,7 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 				<td>Descrizione / Nome</td>
 				<td>
 					<acronym title="Inserisci il nome del computer. E' scritto su un lato del computer">
-						<input type="text" name="nomepc" size="45" />
+						<input type="text" name="nomepc" size="45" value="<?php echo $nomepc; ?>"/>
 					</acronym>
 				</td>
 			</tr>
@@ -58,7 +81,7 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 				<td>Cod. / Inv.</td>
 				<td>
 					<acronym title="Codice o numero di inventario.">
-						<input type="text" name="codice" size="10" />
+						<input type="text" name="codice" size="10" value="<?php echo $codice; ?>"/>
 					</acronym>
 				</td>
 			</tr>
@@ -68,7 +91,7 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 				</td>
 				<td>
 					<acronym title="Inserisci la descrizione dettagliata del problema riscontrato">
-						<textarea name="guasto" rows="6" cols="48"></textarea>
+						<textarea name="descrizione" rows="6" cols="48"><?php echo $descrizione; ?></textarea>
 					<acronym>
 				</td>
 			</tr>
@@ -76,7 +99,7 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 				<td>Segnalato da:</td>
 				<td>
 					<acronym title="Inserisci nome di chi segnala il guasto">
-						<input type="text" name="nome" size="45"/>
+						<input type="text" name="nome" size="45" value="<?php echo $nome; ?>" />
 					</acronym>
 				</td>
 			</tr>
@@ -85,9 +108,9 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 				<td>
 					<acronym title="Dai una priorità">
 						<select name="priorita">
-							<option value="0">Bassa</option>
-							<option value="1">Media</option>
-							<option value="2">Alta</option>
+							<option value="0" <?php if($priorita==0){ echo "selected"; } ?>>Bassa</option>
+							<option value="1" <?php if($priorita==1){ echo "selected"; } ?>>Media</option>
+							<option value="2" <?php if($priorita==2){ echo "selected"; } ?>>Alta</option>
 						</select>
 					</acronym>
 				</td>
