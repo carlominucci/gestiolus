@@ -23,8 +23,3 @@
 		<img src="img/setting.png" alt="Impostazioni" />
 	</a>
 </acronym>
-<acronym title="Torna indietro">
-	<a href="index.php">
-		<img src="img/undo.png" alt="Torna indietro" />
-	</a>
-</acronym>
