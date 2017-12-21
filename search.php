@@ -69,7 +69,11 @@
             {
                 $rs = mysql_fetch_row($query);
 				$id=$rs[7];
-				echo "<tr><td>$rs[10]</td><td>$rs[1]</td><td>$rs[2]</td><td>$rs[3]</td><td>$rs[8]</td><td>$rs[6]</td><td>$arr_tecnici[$id]</td></tr>";
+				echo "<tr><td>$rs[10]</td><td>$rs[1]</td><td>$rs[2]</td><td>$rs[3]";
+				if($rs[4] != ""){
+					echo "<p class=\"segnalatoda\">segnalato da: <b>" . $rs[4] . "</b></p>";
+				}	
+				echo "</td><td>$rs[8]</td><td>$rs[6]</td><td>$arr_tecnici[$id]</td></tr>";
             }
             echo "</table>";
         }
