@@ -20,7 +20,7 @@ Nel dettaglio puoi:
 * se vuoi puoi modificare a piacimento la variabile *$title*, che è la scritta che compare sulla barra del browser.
 
 ## Requisiti ##
-* Apache
+* Server Web 
 * PHP5
 * MySQL
 
