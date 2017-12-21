@@ -78,6 +78,9 @@ if($_POST['filtro'] == "" || $_POST['filtro'] == "tutti"){
                                 echo "<tr>\n";
                                 echo "<td>$row[10]</td><td>$row[1]</td><td>$row[2]</td><td>"; 
 				greppaurl(stripslashes($row[3]));
+				if($row[4] != ""){
+					echo "<p class=\"segnalatoda\">segnalato da: <b>" . $row[4] . "</b></p>";
+				}	
 				echo "</td><td>"; 
 				greppaurl(stripslashes($row[6]));
 				echo "</td><td>" . str_replace("-", "/", $row[5]) . "</td><td>" . str_replace("-", "/", $row[8]) . "</td><td>" . $risolutore[0] . "</td>\n";
@@ -118,6 +121,9 @@ elseif(isset($_POST['filtro'])){
 				echo "<tr>\n";
                                 echo "<td>$row[10]</td><td>$row[1]</td><td>$row[2]</td><td>";
                                 greppaurl(stripslashes($row[3]));
+				if($row[4] != ""){
+					echo "<p class=\"segnalatoda\">segnalato da: <b>" . $row[4] . "</b></p>";
+				}
                                 echo "</td><td>";
                                 greppaurl(stripslashes($row[6]));
                                 echo "</td><td>" . str_replace("-", "/", $row[5]) . "</td><td>" . str_replace("-", "/", $row[8]) . "</td><td>" . $risolutore[0] . "</td>\n";
