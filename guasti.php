@@ -70,15 +70,15 @@
 						}
 						?>
 						</select><br />
-						<acronym title="Elimina: <?php echo $row[3]; ?>">
+						<abbr title="Elimina: <?php echo $row[3]; ?>">
 							<a href="del.php?id=<?php echo $row[0]; ?>"><img src="img/del.png" alt="cancella" /></a> 
-						</acronym>						
-						<acronym title="Modifica: <?php echo $row[3]; ?>">
+						</abbr>						
+						<abbr title="Modifica: <?php echo $row[3]; ?>">
                                                         <a href="edit.php?id=<?php echo $row[0]; ?>"><img src="img/edit.png" alt="modifica" /></a>            
-                                                </acronym>
-						<acronym title="Chiudi: <?php echo $row[3]; ?>">							
+                                                </abbr>
+						<abbr title="Chiudi: <?php echo $row[3]; ?>">							
 							<input type="image" src="img/done.png" border="0" />
-						</acronym>
+						</abbr>
 					</td>
 				</form>
 			<?php

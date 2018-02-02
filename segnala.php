@@ -17,7 +17,7 @@
 			<tr>
 				<td>Unicazione</td>
 				<td>
-					<acronym title="Inserisci l'ubicazione del guasto">
+					<abbr title="Inserisci l'ubicazione del guasto">
 						<select name="ubicazione">
 <?php
 $query="SELECT * FROM lab";
@@ -30,23 +30,23 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 }
 ?>
 						</select>
-					</acronym>
+					</abbr>
 				</td>
 			</tr>
 			<tr>
 				<td>Descrizione / Nome</td>
 				<td>
-					<acronym title="Inserisci il nome del computer. E' scritto su un lato del computer">
+					<abbr title="Inserisci il nome del computer. E' scritto su un lato del computer">
 						<input type="text" name="nomepc" size="45" />
-					</acronym>
+					</abbr>
 				</td>
 			</tr>
 			<tr>
 				<td>Cod. / Inv.</td>
 				<td>
-					<acronym title="Codice o numero di inventario.">
+					<abbr title="Codice o numero di inventario.">
 						<input type="text" name="codice" size="10" />
-					</acronym>
+					</abbr>
 				</td>
 			</tr>
 			<tr>
@@ -54,37 +54,37 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)){
 					Descrizione dettagliata<br />del tipo di problema
 				</td>
 				<td>
-					<acronym title="Inserisci la descrizione dettagliata del problema riscontrato">
+					<abbr title="Inserisci la descrizione dettagliata del problema riscontrato">
 						<textarea name="guasto" rows="6" cols="48"></textarea>
-					<acronym>
+					</abbr>
 				</td>
 			</tr>
 			<tr>
 				<td>Segnalato da:</td>
 				<td>
-					<acronym title="Inserisci nome di chi segnala il guasto">
+					<abbr title="Inserisci nome di chi segnala il guasto">
 						<input type="text" name="nome" size="45"/>
-					</acronym>
+					</abbr>
 				</td>
 			</tr>
 			<tr>
 				<td>Priorità</td>
 				<td>
-					<acronym title="Dai una priorità">
+					<abbr title="Dai una priorità">
 						<select name="priorita">
 							<option value="0">Bassa</option>
 							<option value="1">Media</option>
 							<option value="2">Alta</option>
 						</select>
-					</acronym>
+					</abbr>
 				</td>
 			</tr>
 			<tr>
 				<td>Salva</td>
 				<td>
-					<acronym title="Clicka per inviare la segnalazione guasto">
+					<abbr title="Clicka per inviare la segnalazione guasto">
 						<input type="image" src="img/floppy.png" alt="Segnala Guasto">
-					</acronym>
+					</abbr>
 				</td>
 			</tr>
 	
