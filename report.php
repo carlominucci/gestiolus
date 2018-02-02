@@ -4,7 +4,7 @@
 <html lang="it"> 
 	<head> 
 		<meta charset=utf-8> 
-		<title><?php echo $title; ?></title></head>
+		<title><?php echo $title; ?></title>
 		<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 	</head>
 <body>
@@ -48,11 +48,17 @@ if ( ! get_magic_quotes_gpc() ) {
 		
 <?php
 if($_POST['filtro'] == "" || $_POST['filtro'] == "tutti"){
+                if (!$link) {
+                        die('Could not connect: ' . mysql_error());
+                }else{
+                        $query="SELECT * FROM guasti WHERE stato='1' ORDER BY data_chiusura DESC";
+                        $result = mysql_query($query);
+                        echo "<hr />Numero totale di interventi <b>: " . mysql_affected_rows() . "</b><br /><br />\n";
 ?>
                         <p>
                                 <table class="tabella">
                                         <tr>
-						<th>Cod/Inv</th>
+                                                <th>Cod/Inv</th>
                                                 <th>Computer</th>
                                                 <th>Ubicazione</th>
                                                 <th>Problema Riscontrato</th>
@@ -62,12 +68,7 @@ if($_POST['filtro'] == "" || $_POST['filtro'] == "tutti"){
                                                 <th>Tecnico</th>
                                         </tr>
         <?php
-                if (!$link) {
-                        die('Could not connect: ' . mysql_error());
-                }else{
-                        $query="SELECT * FROM guasti WHERE stato='1' ORDER BY data_chiusura DESC";
-                        $result = mysql_query($query);
-                        echo "<br /><hr />Numero totale di interventi <b>: " . mysql_affected_rows() . "</b><br /><br />\n";
+
 			if (!$result) {
                                 die('Invalid query: ' . mysql_error());
                         }
@@ -139,6 +140,5 @@ elseif(isset($_POST['filtro'])){
 	?>		
 	
 				</table>
-			</p>
 </body>
 </html>

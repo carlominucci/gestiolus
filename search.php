@@ -3,7 +3,7 @@
 <html lang="it"> 
 	<head> 
 		<meta charset=utf-8> 
-		<title><?php echo $title; ?></title></head>
+		<title><?php echo $title; ?></title>
 		<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 	</head>
 <body>
@@ -80,6 +80,5 @@
     }
 ?>
 
-			</p>
 </body>
 </html>

@@ -77,7 +77,7 @@
                                                         <a href="edit.php?id=<?php echo $row[0]; ?>"><img src="img/edit.png" alt="modifica" /></a>            
                                                 </abbr>
 						<abbr title="Chiudi: <?php echo $row[3]; ?>">							
-							<input type="image" src="img/done.png" border="0" />
+							<input type="image" src="img/done.png" alt="Ok" />
 						</abbr>
 					</td>
 				</form>
