@@ -17,11 +17,11 @@ if(isset($_GET['id'])){
 	}	
 }else if(isset($_POST['id'])){
 	$query_update="UPDATE guasti SET 
-	nomepc='" . $_POST[nomepc] . "',
-	ubicazione='" . $_POST[ubicazione] . "',
-	descrizione='" . $_POST[descrizione] . "',
-	nome='" . $_POST[codice] . "',
-	priorita='" . $_POST[priorita] . "'
+	nomepc='" . addslashes(strip_tags($_POST[nomepc])) . "',
+	ubicazione='" . addslashes(strip_tags($_POST[ubicazione])) . "',
+	descrizione='" . addslashes(strip_tags($_POST[descrizione])) . "',
+	nome='" . addslashes(strip_tags($_POST[nome])) . "',
+	priorita='" . addslashes(strip_tags($_POST[priorita])) . "'
 	WHERE id=$_POST[id]";
 	echo $query_update;
 	$result = mysql_query($query_update);
