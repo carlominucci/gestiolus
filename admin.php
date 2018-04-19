@@ -73,6 +73,7 @@ echo $error;
 		<th>Gestione Nominativi</th>
 		<th>Altro</th>
 	</tr>
+	<tr><td>
 						<table class="tabella">
 
 
