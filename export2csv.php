@@ -1,12 +1,14 @@
 <?php
 header("Content-Type: text/plain");
 include "config.php";
+
 if (!$link) {
 	die('Could not connect: ' . mysql_error());
 }else{
 	if(!isset($_GET['filtro'])){
 		$query="SELECT * FROM guasti WHERE stato='1' ORDER BY data_chiusura DESC";
 	}elseif(isset($_GET['filtro'])){
+		$_GET['filtro'] = addslashes(strip_tags($_GET['filtro']));
 		$query="SELECT * FROM guasti WHERE stato='1' AND risolutore = '" . $_GET['filtro'] . "' ORDER BY data_chiusura DESC";
 	}
 	//echo $query;

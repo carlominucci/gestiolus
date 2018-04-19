@@ -105,9 +105,9 @@ $resulttecnici = mysql_query($querytecnici);
 while($rowtecnici = mysql_fetch_array($resulttecnici)){
 	echo "<tr><td>" . $rowtecnici[1] . "</td>";
 	if($rowtecnici[2] == 1){
-		echo "<td><abbr title=\"Utente abilitato. Clicka per disabilitarlo\"><a href=\"admin.php?disable=" . $rowtecnici[0] . "\"><img src=\"img/enable.png\" alt=\"Disabilita\" /></abbr></td></tr>";
+		echo "<td><abbr title=\"Utente abilitato. Clicka per disabilitarlo\"><a href=\"admin.php?disable=" . $rowtecnici[0] . "\"><img src=\"img/enable.png\" alt=\"Disabilita\" /></a></abbr></td></tr>";
 	}elseif($rowtecnici[2] == 0){
-		echo "<td><abbr title=\"Utente disabilitato. Clicka per abilitarlo\"><a href=\"admin.php?enable=" . $rowtecnici[0] . "\"><img src=\"img/disable.png\" alt=\"Abilita\" /></abbr></td></tr>";
+		echo "<td><abbr title=\"Utente disabilitato. Clicka per abilitarlo\"><a href=\"admin.php?enable=" . $rowtecnici[0] . "\"><img src=\"img/disable.png\" alt=\"Abilita\" /></a></abbr></td></tr>";
 	}
 	//echo "<td><a href=\"admin.php?deltecnico=" . $rowtecnici[0] . "\"><img src=\"img/del.png\" alt=\"cancella\" /></a></td></tr>";
 }
