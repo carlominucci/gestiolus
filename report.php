@@ -59,7 +59,7 @@ if($_POST['filtro'] == "" || $_POST['filtro'] == "tutti"){
                                 <table class="tabella">
                                         <tr>
                                                 <th>Cod/Inv</th>
-                                                <th>Computer</th>
+                                                <th>Descrizione/Nome</th>
                                                 <th>Ubicazione</th>
                                                 <th>Problema Riscontrato</th>
                                                 <th>Soluzione</th>
